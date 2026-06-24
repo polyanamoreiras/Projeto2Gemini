@@ -19,16 +19,16 @@ body {
    SOBREPOSIÇÃO DO TOM DE AZUL PARA CORNFLOWERBLUE
    ========================================================================== */
 .bg-blue-900, .accessibility-bar, .banner-section, footer.bg-blue-900 { background-color: #6495ED !important; }
-.bg-blue-800, .font-control { background-color: #4D82E4 !important; }
-.bg-blue-950\/50, .help-box { background-color: rgba(65, 105, 225, 0.4) !important; }
+.bg-blue-800, .font-control { background-color: #123980 !important; }
+.bg-blue-950\/50, .help-box { background-color: rgba(19, 48, 134, 0.4) !important; }
 .bg-blue-50, .rights-section { background-color: #F0F4FF !important; }
 .bg-blue-100, .card-icon, .step-num { background-color: #D2E1FC !important; }
-.text-blue-900, h1, .nav-link, .text-blue-950, h2.text-blue-950 { color: #3b6ec7 !important; }
-.text-blue-600, [data-lucide="shield-check"], [data-lucide="volume-2"] { color: #6495ED !important; }
-.text-blue-800, .text-blue-700 { color: #4a7bd4 !important; }
-.bg-blue-600, .gavel-icon, #speak-btn { background-color: #6495ED !important; }
-#speak-btn:hover { background-color: #4a7bd4 !important; }
-.border-blue-600, .border-blue-100, .border-blue-400 { border-color: #6495ED !important; }
+.text-blue-900, h1, .nav-link, .text-blue-950, h2.text-blue-950 { color: #1b4998 !important; }
+.text-blue-600, [data-lucide="shield-check"], [data-lucide="volume-2"] { color: #2755ab !important; }
+.text-blue-800, .text-blue-700 { color: #23478b !important; }
+.bg-blue-600, .gavel-icon, #speak-btn { background-color: #325caa !important; }
+#speak-btn:hover { background-color: #254d96 !important; }
+.border-blue-600, .border-blue-100, .border-blue-400 { border-color: #33579b !important; }
 
 /* ==========================================================================
    ESTILIZAÇÃO E CENTRALIZAÇÃO DA JANELA MODAL E BACKGROUND (OVERLAY)
