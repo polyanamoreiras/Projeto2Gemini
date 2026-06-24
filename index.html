@@ -68,10 +68,10 @@
                 
                 <div class="help-box bg-blue-950/50 p-6 rounded-2xl inline-block border-2 border-dashed border-blue-400 w-full max-w-lg mx-auto">
                     <p class="text-lg font-semibold text-yellow-300 mb-3 flex items-center justify-center gap-2">
-                        <i data-lucide="help-circle" class="w-5 h-5 animate-pulse"></i>
+                        <i data-lucide="help-circle" class="w-5 h-5"></i>
                         Dúvida ou dificuldade agora?
                     </p>
-                    <button onclick="openHelpModal()" class="w-full bg-emerald-500 hover:bg-emerald-400 text-white font-black text-2xl py-5 px-8 rounded-xl shadow-xl transition-all transform hover:-translate-y-1 active:translate-y-0 flex items-center justify-center gap-3 border-4 border-emerald-300" aria-label="Clique para ajuda">
+                    <button class="botao-ajuda w-full bg-emerald-500 hover:bg-emerald-400 text-white font-black text-2xl py-5 px-8 rounded-xl shadow-xl transition-all flex items-center justify-center gap-3 border-4 border-emerald-300" aria-label="Clique para ajuda">
                         <i data-lucide="life-buoy" class="w-8 h-8"></i>
                         PRECISA DE AJUDA? CLIQUE AQUI
                     </button>
@@ -79,208 +79,69 @@
             </div>
         </section>
 
-        <div class="speech-bar bg-gray-100 border-y border-gray-200 py-3 px-4">
-            <div class="max-w-6xl mx-auto flex flex-col sm:flex-row justify-between items-center gap-3">
-                <span class="font-medium text-gray-700 flex items-center gap-2">
-                    <i data-lucide="volume-2" class="w-5 h-5 text-blue-600"></i>
-                    Prefere ouvir? Nós podemos ler as dicas para você!
-                </span>
-                <div class="flex gap-2">
-                    <button onclick="speakPage()" id="speak-btn" class="bg-blue-600 hover:bg-blue-700 text-white font-bold px-4 py-2 rounded-lg flex items-center gap-2 transition-colors">
-                        <i data-lucide="play" class="w-5 h-5"></i> Ouvir Página
-                    </button>
-                    <button onclick="stopSpeaking()" id="stop-btn" class="bg-red-600 hover:bg-red-700 text-white font-bold px-4 py-2 rounded-lg flex items-center gap-2 transition-colors hidden">
-                        <i data-lucide="square" class="w-5 h-5"></i> Parar Leitura
-                    </button>
-                </div>
-            </div>
-        </div>
-
         <main class="flex-grow max-w-6xl mx-auto px-4 py-12 space-y-16">
 
             <section id="dicas" class="scroll-mt-24">
                 <div class="section-title-wrapper border-l-8 border-blue-600 pl-4 mb-8">
                     <h2 class="text-3xl font-black text-blue-900">1. Dicas de Ouro para sua Segurança</h2>
-                    <p class="text-gray-600 mt-1">Regras simples que servem como um escudo para proteger suas informações no dia a dia.</p>
                 </div>
                 
                 <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                    <div class="info-card bg-white p-8 rounded-2xl shadow-md border border-gray-100 flex flex-col justify-between">
-                        <div>
-                            <div class="card-icon bg-blue-100 text-blue-900 w-16 h-16 rounded-full flex items-center justify-center mb-6">
-                                <i data-lucide="key-round" class="w-8 h-8"></i>
-                            </div>
-                            <h3 class="text-2xl font-bold text-gray-900 mb-3">Crie Senhas Fortes</h3>
-                            <p class="text-gray-700 leading-relaxed">
-                                Evite usar sua data de nascimento ou o nome de netos. Misture palavras fáceis de lembrar com números e símbolos. 
-                            </p>
-                        </div>
-                        <div class="mt-6 pt-4 border-t border-gray-100 bg-blue-50/50 p-3 rounded-lg">
-                            <span class="font-bold text-blue-800 text-sm block">💡 Exemplo seguro:</span>
-                            <span class="font-mono text-gray-800 font-bold block mt-1">CafeComBolo#2026</span>
-                        </div>
+                    <div class="info-card bg-white p-8 rounded-2xl shadow-md border border-gray-100">
+                        <h3 class="text-2xl font-bold text-gray-900 mb-3">Crie Senhas Fortes</h3>
+                        <p class="text-gray-700 leading-relaxed">Evite usar sua data de nascimento ou o nome de netos. Misture palavras fáceis de lembrar com números e símbolos.</p>
                     </div>
-
-                    <div class="info-card bg-white p-8 rounded-2xl shadow-md border border-gray-100 flex flex-col justify-between">
-                        <div>
-                            <div class="card-icon bg-blue-100 text-blue-900 w-16 h-16 rounded-full flex items-center justify-center mb-6">
-                                <i data-lucide="smartphone-charging" class="w-8 h-8"></i>
-                            </div>
-                            <h3 class="text-2xl font-bold text-gray-900 mb-3">A Dupla Proteção</h3>
-                            <p class="text-gray-700 leading-relaxed">
-                                Ative a chamada "confirmação em duas etapas" no seu WhatsApp e aplicativos de banco. É como colocar uma segunda fechadura na sua porta.
-                            </p>
-                        </div>
-                        <div class="mt-6 pt-4 border-t border-gray-100 bg-blue-50/50 p-3 rounded-lg">
-                            <span class="font-bold text-blue-800 text-sm block">💡 Como funciona:</span>
-                            <span class="text-gray-800 text-sm block mt-1">O aplicativo pede uma senha numérica de 6 dígitos de tempos em tempos para garantir que é você mesmo.</span>
-                        </div>
+                    <div class="info-card bg-white p-8 rounded-2xl shadow-md border border-gray-100">
+                        <h3 class="text-2xl font-bold text-gray-900 mb-3">A Dupla Proteção</h3>
+                        <p class="text-gray-700 leading-relaxed">Ative a chamada "confirmação em duas etapas" no seu WhatsApp e aplicativos de banco.</p>
                     </div>
-
-                    <div class="info-card bg-white p-8 rounded-2xl shadow-md border border-gray-100 flex flex-col justify-between">
-                        <div>
-                            <div class="card-icon bg-blue-100 text-blue-900 w-16 h-16 rounded-full flex items-center justify-center mb-6">
-                                <i data-lucide="circle-alert" class="w-8 h-8"></i>
-                            </div>
-                            <h3 class="text-2xl font-bold text-gray-900 mb-3">Desconfie de Pressa</h3>
-                            <p class="text-gray-700 leading-relaxed">
-                                Se receber uma mensagem urgente dizendo que sua conta vai ser bloqueada ou que você ganhou um prêmio que expira logo, pare e respire. A pressa é a maior arma dos golpistas.
-                            </p>
-                        </div>
-                        <div class="mt-6 pt-4 border-t border-gray-100 bg-blue-50/50 p-3 rounded-lg">
-                            <span class="font-bold text-blue-800 text-sm block">💡 Regra de Ouro:</span>
-                            <span class="text-gray-800 text-sm block mt-1">Desligue o telefone ou feche o aplicativo e converse com alguém de sua confiança antes de fazer qualquer coisa.</span>
-                        </div>
+                    <div class="info-card bg-white p-8 rounded-2xl shadow-md border border-gray-100">
+                        <h3 class="text-2xl font-bold text-gray-900 mb-3">Desconfie de Pressa</h3>
+                        <p class="text-gray-700 leading-relaxed">Se receber uma mensagem urgente dizendo que sua conta vai ser bloqueada, pare e respire.</p>
                     </div>
                 </div>
             </section>
 
-            <section id="direitos" class="rights-section bg-blue-50 rounded-3xl p-8 md:p-12 border border-blue-100 scroll-mt-24">
+            <section id="direitos" class="caixa-direitos bg-blue-50 rounded-3xl p-8 md:p-12 border border-blue-100 scroll-mt-24">
                 <div class="max-w-4xl mx-auto">
                     <div class="flex items-center gap-3 mb-6">
-                        <div class="gavel-icon bg-blue-600 text-white p-3 rounded-xl">
-                            <i data-lucide="gavel" class="w-8 h-8"></i>
-                        </div>
-                        <div>
-                            <h2 class="text-3xl font-black text-blue-950">2. Seus Direitos no Ambiente Digital</h2>
-                            <p class="text-blue-800 font-medium">A lei protege você também no computador e no celular.</p>
-                        </div>
+                        <h2 class="text-3xl font-black text-blue-950">2. Seus Direitos no Ambiente Digital</h2>
                     </div>
 
-                    <p class="text-gray-800 mb-8 leading-relaxed text-lg text-summary">
-                        Assim como no world físico temos leis de trânsito e o Estatuto do Idoso, no mundo digital você possui direitos garantidos por leis brasileiras como o <strong>Marco Civil da Internet</strong> e a <strong>LGPD (Lei Geral de Proteção de Dados)</strong>.
+                    <p class="text-gray-800 mb-8 leading-relaxed text-lg">
+                        Assim como no mundo físico temos leis de trânsito e o Estatuto do Idoso, no mundo digital você possui direitos garantidos por leis brasileiras.
                     </p>
 
-                    <div class="space-y-6">
-                        <div class="right-item bg-white p-6 rounded-xl shadow-sm border border-blue-100 flex gap-4 items-start">
-                            <i data-lucide="lock" class="w-7 h-7 text-emerald-600 shrink-0 mt-1"></i>
-                            <div>
-                                <h4 class="text-xl font-bold text-gray-900 mb-1">Direito à Privacidade e Proteção de Dados</h4>
-                                <p class="text-gray-700">Nenhuma empresa pode vender ou compartilhar seu número de telefone, CPF ou fotos sem que você dê uma autorização clara e por escrito.</p>
-                            </div>
-                        </div>
-
-                        <div class="right-item bg-white p-6 rounded-xl shadow-sm border border-blue-100 flex gap-4 items-start">
-                            <i data-lucide="heart" class="w-7 h-7 text-emerald-600 shrink-0 mt-1"></i>
-                            <div>
-                                <h4 class="text-xl font-bold text-gray-900 mb-1">Atendimento Prioritário e Respeitoso</h4>
-                                <p class="text-gray-700">Bancos e serviços públicos na internet devem oferecer canais de atendimento simples, compreensíveis e adaptados para idosos, sem termos técnicos complicados.</p>
-                            </div>
-                        </div>
-
-                        <div class="right-item bg-white p-6 rounded-xl shadow-sm border border-blue-100 flex gap-4 items-start">
-                            <i data-lucide="undo-2" class="w-7 h-7 text-emerald-600 shrink-0 mt-1"></i>
-                            <div>
-                                <h4 class="text-xl font-bold text-gray-900 mb-1">Direito de Arrependimento de Compras</h4>
-                                <p class="text-gray-700">Comprou algo pela internet e se arrependeu ou não era o que esperava? Você tem até <strong>7 dias</strong> após receber o produto para devolvê-lo e ter todo seu dinheiro de volta.</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-            <section id="golpes" class="scroll-mt-24">
-                <div class="section-title-wrapper border-l-8 border-red-500 pl-4 mb-8">
-                    <h2 class="text-3xl font-black text-red-950">3. Como Identificar e Evitar Golpes Comuns</h2>
-                    <p class="text-gray-600 mt-1">Aprenda os truques que os golpistas usam para que você nunca caia neles.</p>
-                </div>
-
-                <div class="space-y-8">
-                    <div class="alert-banner bg-amber-50 border-l-4 border-amber-500 p-6 rounded-r-xl flex gap-4 items-start">
-                        <i data-lucide="alert-triangle" class="w-8 h-8 text-amber-600 shrink-0 mt-1"></i>
-                        <div>
-                            <h4 class="text-xl font-bold text-amber-900">A Regra Fundamental de Segurança</h4>
-                            <p class="text-amber-800 mt-1">Bancos, prefeituras e a Justiça <strong>nunca</strong> mandam links urgentes pedindo sua senha, foto do cartão ou transferências de dinheiro imediatas por WhatsApp ou SMS.</p>
-                        </div>
-                    </div>
-
-                    <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
-                        <div class="scam-card bg-white rounded-2xl shadow-md border border-gray-200 overflow-hidden">
-                            <div class="scam-header bg-red-50 p-6 border-b border-gray-100 flex items-center gap-3">
-                                <span class="badge bg-red-100 text-red-800 font-bold px-3 py-1 rounded text-sm uppercase">Perigo</span>
-                                <h3 class="text-2xl font-bold text-gray-900">O Golpe do Falso Filho ou Parente</h3>
-                            </div>
-                            <div class="p-6 space-y-4">
-                                <p class="text-gray-700">Alguém envia mensagem de um número desconhecido usando a foto de um filho ou neto seu, dizendo que mudou de telefone e precisa de dinheiro urgente para pagar uma conta.</p>
-                                <div class="defense-box bg-red-50/50 p-4 rounded-xl border border-red-100">
-                                    <h4 class="font-bold text-red-800 flex items-center gap-2 mb-1"><i data-lucide="shield" class="w-5 h-5"></i> Como se defender:</h4>
-                                    <p class="text-gray-800 text-sm"><strong>Não faça transferências ou Pix!</strong> Ligue imediatamente para o número antigo do seu parente (que você já tinha salvo) ou faça uma chamada de vídeo para confirmar se é ele mesmo.</p>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="scam-card bg-white rounded-2xl shadow-md border border-gray-200 overflow-hidden">
-                            <div class="scam-header bg-red-50 p-6 border-b border-gray-100 flex items-center gap-3">
-                                <span class="badge bg-red-100 text-red-800 font-bold px-3 py-1 rounded text-sm uppercase">Perigo</span>
-                                <h3 class="text-2xl font-bold text-gray-900">A Falsa Central do Banco</h3>
-                            </div>
-                            <div class="p-6 space-y-4">
-                                <p class="text-gray-700">Você recebe uma ligação telefônica de alguém fingindo ser do seu banco, dizendo que sua conta foi invadida e que você precisa transferir seu dinheiro para uma "conta segura" temporária.</p>
-                                <div class="defense-box bg-red-50/50 p-4 rounded-xl border border-red-100">
-                                    <h4 class="font-bold text-red-800 flex items-center gap-2 mb-1"><i data-lucide="shield" class="w-5 h-5"></i> Como se defender:</h4>
-                                    <p class="text-gray-800 text-sm"><strong>Desligue o telefone imediatamente.</strong> Os bancos nunca pedem para transferir dinheiro para outras contas para "segurança".</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                    <ol class="space-y-4 list-decimal bg-white rounded-2xl border border-blue-100">
+                        <li><strong>Privacidade:</strong> Nenhuma empresa pode vender seus dados sem autorização clara.</li>
+                        <li><strong>Atendimento Prioritário:</strong> Canais digitais de bancos e serviços devem ser adaptados e simples para idosos.</li>
+                        <li><strong>Arrependimento:</strong> Comprou pela internet e não gostou? Tem até 7 dias para devolver e receber o dinheiro de volta.</li>
+                    </ol>
                 </div>
             </section>
 
             <section id="jogo" class="scroll-mt-24 bg-amber-50 rounded-3xl p-8 border border-amber-200 text-center">
                 <div class="max-w-3xl mx-auto space-y-6">
-                    <div class="inline-block bg-amber-200 text-amber-900 font-bold px-4 py-1 rounded-full text-sm uppercase tracking-wider">
-                        Jogo da Memória Digital
-                    </div>
-                    <h2 class="text-3xl font-black text-amber-950">Treine Sua Mente Contra Golpes!</h2>
-                    <p class="text-gray-700 text-lg">Clique nos cartões abaixo para virá-los e descobrir o que fazer em cada situação real do dia a dia!</p>
-                    
+                    <h2 class="text-3xl font-black text-amber-950">Jogo da Memória Digital</h2>
+                    <p class="text-gray-700">Clique nos cartões abaixo para virá-los e descobrir o que fazer!</p>
                     <div class="grid grid-cols-1 md:grid-cols-2 gap-6 pt-4">
                         <div class="flashcard-container" onclick="this.classList.toggle('flipped')">
-                            <div class="flashcard bg-white rounded-2xl shadow-md border-2 border-amber-300 p-8 flex flex-col justify-center items-center cursor-pointer min-h-[220px]">
-                                <div class="front-side space-y-3">
-                                    <i data-lucide="help-circle" class="w-10 h-10 text-amber-600 mx-auto"></i>
+                            <div class="flashcard bg-white rounded-2xl border-2 border-amber-300 p-8 min-h-[200px] flex items-center justify-center cursor-pointer">
+                                <div class="front-side">
                                     <h4 class="text-xl font-bold text-gray-900">Mensagem: "Mãe, mudei de número, me passa um PIX rápido?"</h4>
-                                    <span class="text-xs font-bold text-amber-600 uppercase underline">Clique para ver a resposta</span>
                                 </div>
-                                <div class="back-side space-y-3">
-                                    <i data-lucide="check-circle-2" class="w-10 h-10 text-emerald-600 mx-auto"></i>
-                                    <h4 class="text-xl font-bold text-emerald-800">O que fazer?</h4>
-                                    <p class="text-gray-700 text-sm">Não mande dinheiro! Ligue para o número antigo do seu filho para checar.</p>
+                                <div class="back-side">
+                                    <h4 class="text-xl font-bold text-emerald-800">Ligue para o número antigo do seu filho para checar. Nunca transfira de imediato!</h4>
                                 </div>
                             </div>
                         </div>
-
                         <div class="flashcard-container" onclick="this.classList.toggle('flipped')">
-                            <div class="flashcard bg-white rounded-2xl shadow-md border-2 border-amber-300 p-8 flex flex-col justify-center items-center cursor-pointer min-h-[220px]">
-                                <div class="front-side space-y-3">
-                                    <i data-lucide="help-circle" class="w-10 h-10 text-amber-600 mx-auto"></i>
+                            <div class="flashcard bg-white rounded-2xl border-2 border-amber-300 p-8 min-h-[200px] flex items-center justify-center cursor-pointer">
+                                <div class="front-side">
                                     <h4 class="text-xl font-bold text-gray-900">Ligação: "Aqui é do banco, precisamos atualizar sua senha agora."</h4>
-                                    <span class="text-xs font-bold text-amber-600 uppercase underline">Clique para ver a resposta</span>
                                 </div>
-                                <div class="back-side space-y-3">
-                                    <i data-lucide="check-circle-2" class="w-10 h-10 text-emerald-600 mx-auto"></i>
-                                    <h4 class="text-xl font-bold text-emerald-800">O que fazer?</h4>
-                                    <p class="text-gray-700 text-sm">Desligue na cara! Bancos nunca ligam pedindo senhas por telefone.</p>
+                                <div class="back-side">
+                                    <h4 class="text-xl font-bold text-emerald-800">Desligue imediatamente! O banco nunca telefona pedindo senhas ou chaves.</h4>
                                 </div>
                             </div>
                         </div>
@@ -291,121 +152,44 @@
         </main>
 
         <footer class="bg-blue-900 text-white py-12 px-4 mt-16 border-t-4 border-yellow-400">
-            <div class="max-w-6xl mx-auto text-center space-y-6">
-                <h2 class="text-2xl font-bold">Navegar Seguro</h2>
-                <p class="text-blue-200 text-lg max-w-xl mx-auto footer-desc">Este site foi feito com carinho para ajudar você a aproveitar a tecnologia de forma tranquila, protegida e independente.</p>
-                <div class="border-t border-blue-800 pt-6 flex flex-col sm:flex-row justify-between items-center gap-4 text-sm text-blue-300">
-                    <span>© 2026 Navegar Seguro - Iniciativa de Cidadania e Acessibilidade Digital.</span>
-                    <span class="badge-acessivel bg-blue-800 px-3 py-1 rounded font-semibold text-white">Versão 100% Acessível</span>
-                </div>
+            <div class="max-w-6xl mx-auto text-center">
+                <span>© 2026 Navegar Seguro - Iniciativa de Cidadania e Acessibilidade Digital.</span>
             </div>
         </footer>
 
-    </div> <div id="helpModal" class="modal-overlay fixed inset-0 z-50 p-4 hidden" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+    </div> <div class="modal-fundo">
         
-        <div class="modal-content bg-white rounded-3xl p-8 shadow-2xl border-4 border-emerald-500">
-            <button onclick="closeHelpModal()" class="btn-close-modal absolute top-4 right-4 bg-gray-100 hover:bg-gray-200 text-gray-800 p-2 rounded-full min-w-[44px] min-h-[44px] flex items-center justify-center" aria-label="Fechar janela de ajuda">
-                <i data-lucide="x" class="w-6 h-6"></i>
-            </button>
+        <div class="modal-conteudo bg-white rounded-3xl p-8 border-4 border-emerald-500">
             
             <div class="text-center space-y-4">
-                <div class="modal-icon bg-emerald-100 text-emerald-800 w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-4">
-                    <i data-lucide="life-buoy" class="w-10 h-10"></i>
-                </div>
-                <h3 id="modalTitle" class="text-3xl font-black text-gray-900">Como navegar por este site?</h3>
+                <h3 class="text-3xl font-black text-gray-900">Como navegar por este site?</h3>
                 
                 <div class="text-left space-y-4 text-gray-800 mt-6">
-                    <p class="flex items-start gap-2">
-                        <span class="step-num bg-blue-100 text-blue-900 font-bold rounded-full w-8 h-8 flex items-center justify-center shrink-0">1</span>
-                        <span>Use os botões <strong>A-</strong> e <strong>A+</strong> no topo para ajustar o tamanho da letra.</span>
-                    </p>
-                    <p class="flex items-start gap-2">
-                        <span class="step-num bg-blue-100 text-blue-900 font-bold rounded-full w-8 h-8 flex items-center justify-center shrink-0">2</span>
-                        <span>Use a opção <strong>"Preto e Amarelo"</strong> para ativar o modo noturno/alto contraste.</span>
-                    </p>
-                    <p class="flex items-start gap-2">
-                        <span class="step-num bg-blue-100 text-blue-900 font-bold rounded-full w-8 h-8 flex items-center justify-center shrink-0">3</span>
-                        <span>Clique em <strong>"Ouvir Página"</strong> para escutar as dicas por áudio.</span>
-                    </p>
+                    <p>Use os botões <strong>A-</strong> e <strong>A+</strong> no topo para ajustar o tamanho da letra se achar difícil ler.</p>
+                    <p>Use a opção <strong>"Preto e Amarelo"</strong> para ativar o modo de alto contraste.</p>
                 </div>
 
                 <div class="pt-6">
-                    <button onclick="closeHelpModal()" class="btn-primary w-full bg-blue-900 hover:bg-blue-800 text-white font-bold py-4 px-6 rounded-xl text-xl transition-all">
-                        Entendi, fechar ajuda!
+                    <button class="botao-ajuda botao-fechar w-full bg-blue-900 hover:bg-blue-800 text-white font-bold py-4 px-6 rounded-xl text-xl transition-all">
+                        Fechar
                     </button>
                 </div>
             </div>
+
         </div>
     </div>
 
+    <script src="script.js"></script>
     <script>
-        // Iniciar ícones Lucide
-        lucide.createIcons();
-
-        // Controle do tamanho da fonte
+        // Scripts inline complementares de acessibilidade visual
         let currentFontState = 'normal';
         function changeFontSize(action) {
             const body = document.body;
             body.classList.remove('font-normal-text', 'font-large-text', 'font-xlarge-text');
-            if (action === 'decrease' || action === 'normal') {
-                currentFontState = 'normal';
-                body.classList.add('font-normal-text');
-            } else if (action === 'increase') {
-                if (currentFontState === 'normal') {
-                    currentFontState = 'large';
-                    body.classList.add('font-large-text');
-                } else {
-                    currentFontState = 'xlarge';
-                    body.classList.add('font-xlarge-text');
-                }
-            }
+            if (action === 'decrease' || action === 'normal') { body.classList.add('font-normal-text'); }
+            else if (action === 'increase') { body.classList.add('font-large-text'); }
         }
-
-        // Alternar Alto Contraste
-        function toggleContrast() {
-            document.body.classList.toggle('high-contrast');
-        }
-
-        // Abrir e fechar modal com controle do Overlay e desfoque do fundo
-        function openHelpModal() {
-            const modal = document.getElementById('helpModal');
-            const wrapper = document.getElementById('wrapper-conteudo');
-            modal.classList.remove('hidden');
-            wrapper.classList.add('fundo-desfocado'); // Ativa desfoque e escurecimento parcial
-            document.body.style.overflow = 'hidden';
-        }
-
-        function closeHelpModal() {
-            const modal = document.getElementById('helpModal');
-            const wrapper = document.getElementById('wrapper-conteudo');
-            modal.classList.add('hidden');
-            wrapper.classList.remove('fundo-desfocado');
-            document.body.style.overflow = '';
-        }
-
-        window.addEventListener('keydown', function(e) { if (e.key === 'Escape') closeHelpModal(); });
-
-        // Web Speech API (Leitura)
-        let synth = window.speechSynthesis;
-        let utterance = null;
-        function speakPage() {
-            if (!synth) return alert("Seu navegador não suporta leitura em voz alta.");
-            synth.cancel();
-            const text = "Guia de Segurança Digital para Idosos. Use os recursos de acessibilidade e jogue o jogo dos cartões no final da página para treinar sua mente contra golpes.";
-            utterance = new SpeechSynthesisUtterance(text);
-            utterance.lang = 'pt-BR';
-            utterance.onstart = () => {
-                document.getElementById('speak-btn').classList.add('hidden');
-                document.getElementById('stop-btn').classList.remove('hidden');
-            };
-            utterance.onend = () => resetSpeakButtons();
-            synth.speak(utterance);
-        }
-        function stopSpeaking() { if (synth) { synth.cancel(); resetSpeakButtons(); } }
-        function resetSpeakButtons() {
-            document.getElementById('speak-btn').classList.remove('hidden');
-            document.getElementById('stop-btn').classList.add('hidden');
-        }
+        function toggleContrast() { document.body.classList.toggle('high-contrast'); }
     </script>
 </body>
 </html>

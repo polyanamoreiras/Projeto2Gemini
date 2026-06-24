@@ -3,111 +3,82 @@
    ========================================================================== */
 body {
     font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-    transition: font-size 0.2s ease, background-color 0.3s ease, color 0.3s ease;
 }
 
 .font-normal-text { font-size: 1.15rem; }
 .font-large-text { font-size: 1.35rem; }
 .font-xlarge-text { font-size: 1.6rem; }
 
-.bg-grid {
-    background-image: radial-gradient(circle, rgba(255,255,255,0.15) 1px, transparent 1px);
-    background-size: 20px 20px;
+/* Aplicação de padding de 40px em listas ordenadas */
+ol {
+    padding: 40px;
 }
 
 /* ==========================================================================
    SOBREPOSIÇÃO DO TOM DE AZUL PARA CORNFLOWERBLUE
    ========================================================================== */
 .bg-blue-900, .accessibility-bar, .banner-section, footer.bg-blue-900 { background-color: #6495ED !important; }
-.bg-blue-800, .font-control { background-color: #123980 !important; }
-.bg-blue-950\/50, .help-box { background-color: rgba(19, 48, 134, 0.4) !important; }
-.bg-blue-50, .rights-section { background-color: #F0F4FF !important; }
-.bg-blue-100, .card-icon, .step-num { background-color: #D2E1FC !important; }
-.text-blue-900, h1, .nav-link, .text-blue-950, h2.text-blue-950 { color: #1b4998 !important; }
-.text-blue-600, [data-lucide="shield-check"], [data-lucide="volume-2"] { color: #2755ab !important; }
-.text-blue-800, .text-blue-700 { color: #23478b !important; }
-.bg-blue-600, .gavel-icon, #speak-btn { background-color: #325caa !important; }
-#speak-btn:hover { background-color: #254d96 !important; }
-.border-blue-600, .border-blue-100, .border-blue-400 { border-color: #33579b !important; }
+.bg-blue-800, .font-control { background-color: #4D82E4 !important; }
+.bg-blue-950\/50, .help-box { background-color: rgba(65, 105, 225, 0.4) !important; }
+.bg-blue-50 { background-color: #F0F4FF !important; }
+.text-blue-900, h1, .nav-link, .text-blue-950 { color: #3b6ec7 !important; }
+.text-blue-600 { color: #6495ED !important; }
 
 /* ==========================================================================
-   ESTILIZAÇÃO E CENTRALIZAÇÃO DA JANELA MODAL E BACKGROUND (OVERLAY)
+   CONTROLE E CORREÇÃO DO LAYOUT DOS MODAIS E SEÇÕES
    ========================================================================== */
 
-/* Cortina que escurece e suaviza o fundo da tela atrás do modal */
-.modal-overlay {
-    background-color: rgba(0, 0, 0, 0.55);
-    backdrop-filter: blur(2px); /* Leve desfoque no fundo */
-    transition: all 0.3s ease;
+/* Seção de direitos limpa: Removidas propriedades exclusivas do modal */
+.caixa-direitos {
+    display: block;
 }
 
-/* Efeito opcional aplicado na div principal da página quando o modal abre */
+/* Configuração de fundo oculto com display: none para controle via script */
+.modal-fundo {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    backdrop-filter: blur(3px);
+}
+
+/* Classe exclusiva do modal para prevenir quebras na seção de direitos */
+.modal-conteudo {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    
+    max-width: 90%;
+    width: 600px;
+    margin: 0 !important;
+    
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+}
+
+/* Efeito aplicado na div wrapper do conteúdo quando o modal abre */
 .fundo-desfocado {
-    filter: grayscale(30%) blur(4px);
-    pointer-events: none; /* Bloqueia cliques fora do modal */
-}
-
-/* Customização exata solicitada para centralização absoluta e tamanho do modal */
-.modal-content {
-    position: fixed;               /* Posicionamento flutuante fixo na janela */
-    top: 50%;                      /* Desloca 50% do topo */
-    left: 50%;                     /* Desloca 50% da esquerda */
-    transform: translate(-50%, -50%); /* Centraliza perfeitamente com base no próprio eixo */
-    
-    max-width: 90%;                /* Largura máxima responsiva */
-    width: 600px;                  /* Largura ideal do modal */
-    margin: 0 !important;          /* Zera margens externas */
-    
-    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.4);
-    overflow-y: auto;              /* Permite rolagem interna caso falte espaço vertical */
-    max-height: 90vh;
+    filter: grayscale(20%) blur(4px);
+    pointer-events: none; 
 }
 
 /* ==========================================================================
    ESTILOS DO JOGO DE FLASHCARDS (VIRADA 3D)
    ========================================================================== */
-.flashcard-container {
-    perspective: 1000px;
-}
-
-.flashcard {
-    position: relative;
-    transform-style: preserve-3d;
-    transition: transform 0.6s ease;
-}
-
-.flashcard-container.flipped .flashcard {
-    transform: rotateY(180deg);
-}
-
-.front-side, .back-side {
-    backface-visibility: hidden;
-    position: absolute;
-    top: 0; left: 0; right: 0; bottom: 0;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    padding: 1.5rem;
-}
-
-.back-side {
-    transform: rotateY(180deg);
-    background-color: #f0fdf4;
-    border-radius: 1rem;
-}
+.flashcard-container { perspective: 1000px; }
+.flashcard { position: relative; transform-style: preserve-3d; transition: transform 0.5s ease; }
+.flashcard-container.flipped .flashcard { transform: rotateY(180deg); }
+.front-side, .back-side { backface-visibility: hidden; padding: 1.5rem; text-align: center; }
+.back-side { transform: rotateY(180deg); background-color: #f0fdf4; position: absolute; top: 0; left: 0; right: 0; bottom: 0; display: flex; align-items: center; justify-content: center; border-radius: 1rem; }
 
 /* ==========================================================================
-   MODO DE ALTO CONTRASTE (PRETO E AMARELO)
+   MODO DE ALTO CONTRASTE
    ========================================================================== */
 .high-contrast { background-color: #000000 !important; color: #FFFF00 !important; }
-.high-contrast .bg-card, .high-contrast .bg-white, .high-contrast .bg-gray-50, .high-contrast .bg-gray-100, .high-contrast .bg-blue-50, .high-contrast .bg-blue-900, .high-contrast .bg-blue-950\/50, .high-contrast .bg-red-50, .high-contrast .bg-amber-50, .high-contrast .bg-emerald-100, .high-contrast .bg-blue-100, .high-contrast .bg-red-100, .high-contrast .bg-blue-800, .high-contrast section, .high-contrast header, .high-contrast footer, .high-contrast main, .high-contrast div { background-color: #000000 !important; color: #FFFF00 !important; border-color: #FFFF00 !important; }
-.high-contrast button, .high-contrast a, .high-contrast .nav-link, .high-contrast .btn-accessibility, .high-contrast .btn-contrast { background-color: #FFFF00 !important; color: #000000 !important; border: 2px solid #FFFFFF !important; font-weight: 900 !important; text-decoration: none !important; }
-.high-contrast button:hover, .high-contrast a:hover { background-color: #FFFFFF !important; color: #000000 !important; }
-.high-contrast p, .high-contrast span, .high-contrast h1, .high-contrast h2, .high-contrast h3, .high-contrast h4, .high-contrast li, .high-contrast strong, .high-contrast label { color: #FFFF00 !important; }
-.high-contrast svg, .high-contrast i, .high-contrast [data-lucide] { stroke: #FFFF00 !important; fill: none !important; }
-.high-contrast .text-amber-700, .high-contrast .text-red-600, .high-contrast .text-emerald-700, .high-contrast .text-blue-700, .high-contrast .text-blue-950, .high-contrast .text-amber-900, .high-contrast .text-amber-800 { color: #FFFF00 !important; text-decoration: underline !important; }
-.high-contrast .border-l-8, .high-contrast .border-l-4, .high-contrast .border-2, .high-contrast .border-4 { border-color: #FFFF00 !important; }
-.high-contrast .modal-content { background-color: #000000 !important; border: 5px solid #FFFF00 !important; }
-.high-contrast .step-num { background-color: #FFFF00 !important; color: #000000 !important; border: 1px solid #FFFFFF !important; }
+.high-contrast div, .high-contrast section, .high-contrast ol, .high-contrast li, .high-contrast p, .high-contrast h3 { background-color: #000000 !important; color: #FFFF00 !important; border-color: #FFFF00 !important; }
+.high-contrast button { background-color: #FFFF00 !important; color: #000000 !important; font-weight: bold; }
 .high-contrast .back-side { background-color: #000000 !important; transform: rotateY(180deg); }
