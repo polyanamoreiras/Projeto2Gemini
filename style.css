@@ -6,7 +6,7 @@ body {
     transition: font-size 0.2s ease, background-color 0.3s ease, color 0.3s ease;
 }
 
-/* Modificadores de tamanho de fonte dinâmicos (ativados via JS) */
+/* Modificadores de tamanho de fonte dinâmicos */
 .font-normal-text {
     font-size: 1.15rem;
 }
@@ -26,11 +26,11 @@ body {
 }
 
 /* ==========================================================================
-   MODO DE ALTO CONTRASTE (PRETO E AMARELO)
+   MODO DE ALTO CONTRASTE (ESTREITAMENTE PRETO E AMARELO)
    ========================================================================== */
 .high-contrast {
     background-color: #000000 !important;
-    color: crimson!important;
+    color: #FFFF00 !important;
 }
 
 /* Força que elementos que contêm fundos fiquem pretos com bordas amarelas */
@@ -53,8 +53,8 @@ body {
 .high-contrast main,
 .high-contrast div {
     background-color: #000000 !important;
-    color: crimson !important;
-    border-color: crimson !important;
+    color: #FFFF00 !important;
+    border-color: #FFFF00 !important;
 }
 
 /* Ajusta botões e links no modo de alto contraste */
@@ -63,7 +63,7 @@ body {
 .high-contrast .nav-link,
 .high-contrast .btn-accessibility,
 .high-contrast .btn-contrast {
-    background-color: crimson !important;
+    background-color: #FFFF00 !important;
     color: #000000 !important;
     border: 2px solid #FFFFFF !important;
     font-weight: 900 !important;
@@ -86,14 +86,14 @@ body {
 .high-contrast li,
 .high-contrast strong,
 .high-contrast label {
-    color: crimson !important;
+    color: #FFFF00 !important;
 }
 
 /* Modificadores de ícones no Alto Contraste */
 .high-contrast svg, 
 .high-contrast i, 
 .high-contrast [data-lucide] {
-    stroke: crimson !important;
+    stroke: #FFFF00 !important;
     fill: none !important;
 }
 
@@ -105,7 +105,7 @@ body {
 .high-contrast .text-blue-950,
 .high-contrast .text-amber-900,
 .high-contrast .text-amber-800 {
-    color: crimson !important;
+    color: #FFFF00 !important;
     text-decoration: underline !important;
 }
 
@@ -113,17 +113,17 @@ body {
 .high-contrast .border-l-4,
 .high-contrast .border-2,
 .high-contrast .border-4 {
-    border-color: crimson !important;
+    border-color: #FFFF00 !important;
 }
 
 /* Modal de ajuda no Alto Contraste */
 .high-contrast .modal-content {
     background-color: #000000 !important;
-    border: 5px solid crimson !important;
+    border: 5px solid #FFFF00 !important;
 }
 
 .high-contrast .step-num {
-    background-color: crimson !important;
+    background-color: #FFFF00 !important;
     color: #000000 !important;
     border: 1px solid #FFFFFF !important;
 }

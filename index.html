@@ -4,16 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Segurança Digital para Idosos</title>
-    <!-- Tailwind CSS para base de layout responsivo -->
     <script src="https://cdn.tailwindcss.com"></script>
-    <!-- Lucide Icons para os ícones intuitivos -->
     <script src="https://unpkg.com/lucide@latest"></script>
-    <!-- Folha de estilo externa com as regras visuais e de acessibilidade -->
     <link rel="stylesheet" href="style.css">
 </head>
 <body class="bg-gray-50 text-gray-900 font-normal-text min-h-screen flex flex-col selection:bg-blue-200">
 
-    <!-- Barra de Acessibilidade (Fixa no topo para fácil acesso) -->
     <div class="accessibility-bar bg-blue-900 text-white py-3 px-4 sticky top-0 z-40 shadow-md">
         <div class="max-w-6xl mx-auto flex flex-wrap justify-between items-center gap-3">
             <span class="font-bold flex items-center gap-2 text-lg sm:text-xl">
@@ -21,7 +17,6 @@
                 Painel de Acessibilidade:
             </span>
             <div class="flex flex-wrap items-center gap-2 sm:gap-4">
-                <!-- Controle de Tamanho da Fonte -->
                 <div class="font-control flex items-center gap-1 bg-blue-800 rounded-lg p-1">
                     <span class="text-sm px-2 font-semibold text-white">Letra:</span>
                     <button onclick="changeFontSize('decrease')" class="btn-accessibility bg-white text-blue-900 font-bold px-3 py-1 rounded hover:bg-gray-100 min-w-[40px] text-lg transition-transform active:scale-95" aria-label="Diminuir tamanho da letra">A-</button>
@@ -29,7 +24,6 @@
                     <button onclick="changeFontSize('increase')" class="btn-accessibility bg-white text-blue-900 font-bold px-3 py-1 rounded hover:bg-gray-100 min-w-[40px] text-lg transition-transform active:scale-95" aria-label="Aumentar tamanho da letra">A+</button>
                 </div>
                 
-                <!-- Botão de Alto Contraste -->
                 <button onclick="toggleContrast()" class="btn-contrast bg-yellow-400 text-blue-950 font-bold px-4 py-2 rounded-lg flex items-center gap-2 hover:bg-yellow-300 transition-transform active:scale-95 text-base sm:text-lg" aria-label="Ativar ou desativar alto contraste">
                     <i data-lucide="contrast" class="w-5 h-5"></i>
                     <span>Preto e Amarelo</span>
@@ -38,7 +32,6 @@
         </div>
     </div>
 
-    <!-- Cabeçalho Principal -->
     <header class="bg-white border-b border-gray-200 py-6 px-4">
         <div class="max-w-6xl mx-auto flex flex-col md:flex-row justify-between items-center gap-4 text-center md:text-left">
             <div>
@@ -56,9 +49,7 @@
         </div>
     </header>
 
-    <!-- Seção 1: Banner Inicial e Botão de Ajuda -->
     <section class="banner-section bg-blue-900 text-white py-12 px-4 shadow-inner relative overflow-hidden">
-        <!-- Textura de fundo suave -->
         <div class="absolute inset-0 opacity-10 pointer-events-none bg-grid"></div>
 
         <div class="max-w-4xl mx-auto text-center relative z-10">
@@ -72,7 +63,6 @@
                 Neste espaço, explicamos de forma simples e com letras grandes como se proteger de perigos digitais.
             </p>
             
-            <!-- Botão de Ajuda em Destaque -->
             <div class="help-box bg-blue-950/50 p-6 rounded-2xl inline-block border-2 border-dashed border-blue-400 w-full max-w-lg mx-auto">
                 <p class="text-lg font-semibold text-yellow-300 mb-3 flex items-center justify-center gap-2">
                     <i data-lucide="help-circle" class="w-5 h-5 animate-pulse"></i>
@@ -86,7 +76,6 @@
         </div>
     </section>
 
-    <!-- Barra do Leitor de Tela -->
     <div class="speech-bar bg-gray-100 border-y border-gray-200 py-3 px-4">
         <div class="max-w-6xl mx-auto flex flex-col sm:flex-row justify-between items-center gap-3">
             <span class="font-medium text-gray-700 flex items-center gap-2">
@@ -104,10 +93,8 @@
         </div>
     </div>
 
-    <!-- Conteúdo Principal -->
     <main class="flex-grow max-w-6xl mx-auto px-4 py-12 space-y-16">
 
-        <!-- Seção 2: Dicas de segurança digital -->
         <section id="dicas" class="scroll-mt-24">
             <div class="section-title-wrapper border-l-8 border-blue-600 pl-4 mb-8">
                 <h2 class="text-3xl font-black text-blue-900">1. Dicas de Ouro para sua Segurança</h2>
@@ -115,7 +102,6 @@
             </div>
             
             <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                <!-- Card 1 -->
                 <div class="info-card bg-white p-8 rounded-2xl shadow-md border border-gray-100 flex flex-col justify-between">
                     <div>
                         <div class="card-icon bg-blue-100 text-blue-900 w-16 h-16 rounded-full flex items-center justify-center mb-6">
@@ -132,7 +118,6 @@
                     </div>
                 </div>
 
-                <!-- Card 2 -->
                 <div class="info-card bg-white p-8 rounded-2xl shadow-md border border-gray-100 flex flex-col justify-between">
                     <div>
                         <div class="card-icon bg-blue-100 text-blue-900 w-16 h-16 rounded-full flex items-center justify-center mb-6">
@@ -149,7 +134,6 @@
                     </div>
                 </div>
 
-                <!-- Card 3 -->
                 <div class="info-card bg-white p-8 rounded-2xl shadow-md border border-gray-100 flex flex-col justify-between">
                     <div>
                         <div class="card-icon bg-blue-100 text-blue-900 w-16 h-16 rounded-full flex items-center justify-center mb-6">
@@ -168,7 +152,6 @@
             </div>
         </section>
 
-        <!-- Seção 3: Direitos na Internet -->
         <section id="direitos" class="rights-section bg-blue-50 rounded-3xl p-8 md:p-12 border border-blue-100 scroll-mt-24">
             <div class="max-w-4xl mx-auto">
                 <div class="flex items-center gap-3 mb-6">
@@ -186,7 +169,6 @@
                 </p>
 
                 <div class="space-y-6">
-                    <!-- Direito 1 -->
                     <div class="right-item bg-white p-6 rounded-xl shadow-sm border border-blue-100 flex gap-4 items-start">
                         <i data-lucide="lock" class="w-7 h-7 text-emerald-600 shrink-0 mt-1"></i>
                         <div>
@@ -195,7 +177,6 @@
                         </div>
                     </div>
 
-                    <!-- Direito 2 -->
                     <div class="right-item bg-white p-6 rounded-xl shadow-sm border border-blue-100 flex gap-4 items-start">
                         <i data-lucide="heart" class="w-7 h-7 text-emerald-600 shrink-0 mt-1"></i>
                         <div>
@@ -204,7 +185,6 @@
                         </div>
                     </div>
 
-                    <!-- Direito 3 -->
                     <div class="right-item bg-white p-6 rounded-xl shadow-sm border border-blue-100 flex gap-4 items-start">
                         <i data-lucide="undo-2" class="w-7 h-7 text-emerald-600 shrink-0 mt-1"></i>
                         <div>
@@ -216,7 +196,6 @@
             </div>
         </section>
 
-        <!-- Seção 4: Como identificar golpes -->
         <section id="golpes" class="scroll-mt-24">
             <div class="section-title-wrapper border-l-8 border-red-500 pl-4 mb-8">
                 <h2 class="text-3xl font-black text-red-950">3. Como Identificar e Evitar Golpes Comuns</h2>
@@ -224,7 +203,6 @@
             </div>
 
             <div class="space-y-8">
-                <!-- Alerta Fundamental -->
                 <div class="alert-banner bg-amber-50 border-l-4 border-amber-500 p-6 rounded-r-xl flex gap-4 items-start">
                     <i data-lucide="alert-triangle" class="w-8 h-8 text-amber-600 shrink-0 mt-1"></i>
                     <div>
@@ -233,10 +211,8 @@
                     </div>
                 </div>
 
-                <!-- Lista de Golpes -->
                 <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
                     
-                    <!-- Golpe 1 -->
                     <div class="scam-card bg-white rounded-2xl shadow-md border border-gray-200 overflow-hidden">
                         <div class="scam-header bg-red-50 p-6 border-b border-gray-100 flex items-center gap-3">
                             <span class="badge bg-red-100 text-red-800 font-bold px-3 py-1 rounded text-sm uppercase">Perigo</span>
@@ -257,7 +233,6 @@
                         </div>
                     </div>
 
-                    <!-- Golpe 2 -->
                     <div class="scam-card bg-white rounded-2xl shadow-md border border-gray-200 overflow-hidden">
                         <div class="scam-header bg-red-50 p-6 border-b border-gray-100 flex items-center gap-3">
                             <span class="badge bg-red-100 text-red-800 font-bold px-3 py-1 rounded text-sm uppercase">Perigo</span>
@@ -278,7 +253,6 @@
                         </div>
                     </div>
 
-                    <!-- Golpe 3 -->
                     <div class="scam-card bg-white rounded-2xl shadow-md border border-gray-200 overflow-hidden">
                         <div class="scam-header bg-red-50 p-6 border-b border-gray-100 flex items-center gap-3">
                             <span class="badge bg-red-100 text-red-800 font-bold px-3 py-1 rounded text-sm uppercase">Perigo</span>
@@ -299,7 +273,6 @@
                         </div>
                     </div>
 
-                    <!-- Golpe 4 -->
                     <div class="scam-card bg-white rounded-2xl shadow-md border border-gray-200 overflow-hidden">
                         <div class="scam-header bg-red-50 p-6 border-b border-gray-100 flex items-center gap-3">
                             <span class="badge bg-red-100 text-red-800 font-bold px-3 py-1 rounded text-sm uppercase">Perigo</span>
@@ -326,7 +299,6 @@
 
     </main>
 
-    <!-- Rodapé -->
     <footer class="bg-blue-900 text-white py-12 px-4 mt-16 border-t-4 border-yellow-400">
         <div class="max-w-6xl mx-auto text-center space-y-6">
             <h2 class="text-2xl font-bold">Navegar Seguro</h2>
@@ -340,10 +312,8 @@
         </div>
     </footer>
 
-    <!-- MODAL DE AJUDA -->
     <div id="helpModal" class="fixed inset-0 bg-black/75 z-50 flex items-center justify-center p-4 hidden" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
         <div class="modal-content bg-white rounded-3xl max-w-lg w-full p-8 relative shadow-2xl border-4 border-emerald-500">
-            <!-- Botão de Fechar -->
             <button onclick="closeHelpModal()" class="btn-close-modal absolute top-4 right-4 bg-gray-100 hover:bg-gray-200 text-gray-800 p-2 rounded-full min-w-[44px] min-h-[44px] flex items-center justify-center" aria-label="Fechar janela de ajuda">
                 <i data-lucide="x" class="w-6 h-6"></i>
             </button>
@@ -382,12 +352,11 @@
         </div>
     </div>
 
-    <!-- Scripts de Interatividade e Acessibilidade -->
     <script>
-        // Iniciar os ícones Lucide
+        // Iniciar ícones Lucide
         lucide.createIcons();
 
-        // Variável de controle do tamanho da fonte
+        // Controle do tamanho da fonte
         let currentFontState = 'normal';
 
         function changeFontSize(action) {
@@ -411,12 +380,12 @@
             }
         }
 
-        // Modo de Alto Contraste
+        // Alternar Alto Contraste
         function toggleContrast() {
             document.body.classList.toggle('high-contrast');
         }
 
-        // Controle do Modal de Ajuda
+        // Janela Modal
         function openHelpModal() {
             const modal = document.getElementById('helpModal');
             modal.classList.remove('hidden');
@@ -429,20 +398,19 @@
             document.body.style.overflow = '';
         }
 
-        // Fechar com tecla ESC
         window.addEventListener('keydown', function(event) {
             if (event.key === 'Escape') {
                 closeHelpModal();
             }
         });
 
-        // Web Speech API - Leitor de Tela Embutido
+        // Web Speech API (Leitura em Voz Alta)
         let synth = window.speechSynthesis;
         let utterance = null;
 
         function speakPage() {
             if (!synth) {
-                alert("Desculpe, seu aparelho ou navegador não suporta a função de leitura de tela automática.");
+                alert("Desculpe, seu navegador não suporta a função de leitura em voz alta.");
                 return;
             }
 
@@ -464,7 +432,7 @@
 
             utterance = new SpeechSynthesisUtterance(fullText);
             utterance.lang = 'pt-BR';
-            utterance.rate = 0.95; // Velocidade confortável
+            utterance.rate = 0.95; 
 
             utterance.onstart = function() {
                 document.getElementById('speak-btn').classList.add('hidden');
