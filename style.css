@@ -1,0 +1,129 @@
+/* ==========================================================================
+   CONFIGURAÇÕES GERAIS E ACESSIBILIDADE DE FONTES
+   ========================================================================== */
+body {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    transition: font-size 0.2s ease, background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Modificadores de tamanho de fonte dinâmicos (ativados via JS) */
+.font-normal-text {
+    font-size: 1.15rem;
+}
+
+.font-large-text {
+    font-size: 1.35rem;
+}
+
+.font-xlarge-text {
+    font-size: 1.6rem;
+}
+
+/* Textura suave de fundo para o banner inicial */
+.bg-grid {
+    background-image: radial-gradient(circle, rgba(255,255,255,0.15) 1px, transparent 1px);
+    background-size: 20px 20px;
+}
+
+/* ==========================================================================
+   MODO DE ALTO CONTRASTE (PRETO E AMARELO)
+   ========================================================================== */
+.high-contrast {
+    background-color: #000000 !important;
+    color: crimson!important;
+}
+
+/* Força que elementos que contêm fundos fiquem pretos com bordas amarelas */
+.high-contrast .bg-card, 
+.high-contrast .bg-white, 
+.high-contrast .bg-gray-50,
+.high-contrast .bg-gray-100,
+.high-contrast .bg-blue-50,
+.high-contrast .bg-blue-900,
+.high-contrast .bg-blue-950\/50,
+.high-contrast .bg-red-50,
+.high-contrast .bg-amber-50,
+.high-contrast .bg-emerald-100,
+.high-contrast .bg-blue-100,
+.high-contrast .bg-red-100,
+.high-contrast .bg-blue-800,
+.high-contrast section,
+.high-contrast header,
+.high-contrast footer,
+.high-contrast main,
+.high-contrast div {
+    background-color: #000000 !important;
+    color: crimson !important;
+    border-color: crimson !important;
+}
+
+/* Ajusta botões e links no modo de alto contraste */
+.high-contrast button, 
+.high-contrast a,
+.high-contrast .nav-link,
+.high-contrast .btn-accessibility,
+.high-contrast .btn-contrast {
+    background-color: crimson !important;
+    color: #000000 !important;
+    border: 2px solid #FFFFFF !important;
+    font-weight: 900 !important;
+    text-decoration: none !important;
+}
+
+.high-contrast button:hover, 
+.high-contrast a:hover {
+    background-color: #FFFFFF !important;
+    color: #000000 !important;
+}
+
+/* Força a cor amarela pura para elementos de texto, títulos e marcadores */
+.high-contrast p, 
+.high-contrast span, 
+.high-contrast h1, 
+.high-contrast h2, 
+.high-contrast h3, 
+.high-contrast h4,
+.high-contrast li,
+.high-contrast strong,
+.high-contrast label {
+    color: crimson !important;
+}
+
+/* Modificadores de ícones no Alto Contraste */
+.high-contrast svg, 
+.high-contrast i, 
+.high-contrast [data-lucide] {
+    stroke: crimson !important;
+    fill: none !important;
+}
+
+/* Elementos de alerta e destaque no Alto Contraste */
+.high-contrast .text-amber-700,
+.high-contrast .text-red-600,
+.high-contrast .text-emerald-700,
+.high-contrast .text-blue-700,
+.high-contrast .text-blue-950,
+.high-contrast .text-amber-900,
+.high-contrast .text-amber-800 {
+    color: crimson !important;
+    text-decoration: underline !important;
+}
+
+.high-contrast .border-l-8,
+.high-contrast .border-l-4,
+.high-contrast .border-2,
+.high-contrast .border-4 {
+    border-color: crimson !important;
+}
+
+/* Modal de ajuda no Alto Contraste */
+.high-contrast .modal-content {
+    background-color: #000000 !important;
+    border: 5px solid crimson !important;
+}
+
+.high-contrast .step-num {
+    background-color: crimson !important;
+    color: #000000 !important;
+    border: 1px solid #FFFFFF !important;
+}
