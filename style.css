@@ -1,0 +1,31 @@
+/* =========================
+   MODO CONTRASTE
+========================= */
+.contrast {
+    background: black !important;
+    color: yellow !important;
+}
+
+.contrast * {
+    background: black !important;
+    color: yellow !important;
+    border-color: yellow !important;
+}
+
+/* =========================
+   MODAL (sem Tailwind aqui)
+========================= */
+.hidden {
+    display: none;
+}
+
+/* =========================
+   MELHORIAS VISUAIS OPCIONAIS
+========================= */
+button {
+    cursor: pointer;
+}
+
+a {
+    text-decoration: none;
+}
